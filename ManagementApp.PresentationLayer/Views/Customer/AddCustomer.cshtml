@@ -1,0 +1,56 @@
+﻿@model ManagementApp.Entities.Concrete.Customer
+
+@{
+    ViewData["Title"] = "Add Customer";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@using (Html.BeginForm("AddCustomer", "Customer", FormMethod.Post))
+{
+    <div class="col-12 grid-margin stretch-card">
+        <div class="card">
+            <div class="card-body">
+                <p class="card-description"> Add Customer </p>
+                <form class="forms-sample">
+                    <div class="form-group form-floating pt-2">
+                        <input type="text" class="form-control" id="FirstName" name="FirstName">
+                        <label for="FirstName">First Name</label>
+                        <span asp-validation-for="FirstName" class="text-danger float-end"></span>
+                    </div>
+                    <div class="form-group form-floating pt-2">
+                        <input type="text" class="form-control" id="LastName" name="LastName">
+                        <label for="LastName">Last Name</label>
+                        <span asp-validation-for="LastName" class="text-danger float-end"></span>
+                    </div>
+                    <div class="form-group form-floating pt-2">
+                        <input type="text" class="form-control" id="CustomerNumber" name="CustomerNumber">
+                        <label for="CustomerNumber">Customer Number</label>
+                        <span asp-validation-for="CustomerNumber" class="text-danger float-end"></span>
+                    </div>
+                    <div class="form-group form-floating pt-2">
+                        <input type="text" class="form-control" id="MembershipLevel" name="MembershipLevel">
+                        <label for="MembershipLevel">Membership Level</label>
+                        <span asp-validation-for="MembershipLevel" class="text-danger float-end"></span>
+                    </div>
+                    <div class="form-group form-floating pt-2">
+                        <input type="text" class="form-control" id="Phone" name="Phone">
+                        <label for="Phone">Phone</label>
+                        <span asp-validation-for="Phone" class="text-danger float-end"></span>
+                    </div>
+                    <div class="form-group form-floating pt-2">
+                        <input type="text" class="form-control" id="Mail" name="Mail">
+                        <label for="Mail">Mail</label>
+                        <span asp-validation-for="Mail" class="text-danger float-end"></span>
+                    </div>
+                    <div class="form-group form-floating pt-2">
+                        <textarea class="form-control" id="Adress" name="Adress" rows="12"></textarea>
+                        <label for="Adress">Adress</label>
+                        <span asp-validation-for="Adress" class="text-danger float-end"></span>
+                    </div>
+                    <br />
+                    <button type="submit" class="btn btn-outline-success float-end">Save</button>
+                </form>
+            </div>
+        </div>
+    </div>
+}
